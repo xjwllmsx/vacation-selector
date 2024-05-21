@@ -48,5 +48,4 @@ public class Destination{
   public String printDestination(){
     return cityName + ", " + countryName;
   }
-  
 }

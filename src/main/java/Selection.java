@@ -33,6 +33,7 @@ public class Selection {
 
   // Prints destination statement
   public void printDestinationStatement(){
+
     // Print next destination to user
     System.out.println("Your next vacation will be in " + getDestination());
   }
@@ -55,5 +56,4 @@ public class Selection {
     }
     return satisfaction;
   }
-  
 }
