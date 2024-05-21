@@ -20,4 +20,8 @@ public class Menu{
     // Return userInput
     return userInput;
   }
+
+  public void invalidInput(){
+    System.out.println("Invalid input! Please try again.\n");
+  }
 }
