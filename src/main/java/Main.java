@@ -38,25 +38,37 @@ public class Main{
           // Notify the user of ArrayList addition
           System.out.println(newDestination.printDestination() + " has been added to your list of desired vacation destinations.\n");
 
-          // Ask user if they would like to add another destination
-          System.out.print("Would you like to add another destination? Enter 'yes' or 'no': ");
+          // Create boolean variable for while loop condition
+          boolean addAnother = true;
 
-          // New Scanner object
-          Scanner input = new Scanner(System.in);
-          
-          // Save user input into a variable
-          String userInput = input.nextLine().toLowerCase();
+          // Loops question if user inputs an invalid option
+          while(addAnother){
+            
+            // Ask user if they would like to add another destination
+            System.out.print("Would you like to add another destination? Enter 'yes' or 'no': ");
+            
+            // New Scanner object
+            Scanner input = new Scanner(System.in);
 
-          // Conditional statement
-          if(userInput.equals("yes")){
-            // Restarts loop
-            continue;
-          }
-          else if(userInput.equals("no")){
-            // Ends while loop
-            addADestination = false;
-            // Adds blank line for space
-            System.out.println();
+            // Save user input into a variable
+            String userInput = input.nextLine().toLowerCase();
+            
+            // Conditional statement
+            if(userInput.equals("yes")){
+              // Restarts loop
+              break;
+            }
+            else if(userInput.equals("no")){
+              // Ends while loops
+              addAnother = false;
+              addADestination = false;
+              // Adds blank line for space
+              System.out.println();
+            }
+            else{
+              System.out.println("Invalid entry!\n");
+              continue;
+            }
           }
         }
       }
@@ -109,6 +121,11 @@ public class Main{
           System.out.println("\nHave a great trip to " + select.getDestination() + "!");
           continueProgram = false;
         }
+      }
+
+      // If the user input does not match any of the listed commands
+      else{
+        menu.invalidInput();
       }
     }
   }
